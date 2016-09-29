@@ -29,15 +29,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var mySecondNumberLabel: UILabel!
     
+    @IBOutlet weak var myThirdNumberLabel: UILabel!
+    
+    @IBOutlet weak var myFourthNumberLabel: UILabel!
+    
     @IBOutlet weak var PFaFGLabel: UILabel!
 
+    @IBOutlet weak var SingeULabel: UILabel!
+    
     @IBOutlet weak var fristerLabel: UILabel!
 
-
+    @IBOutlet weak var vestALabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+      
         PickerView.dataSource = self
         PickerView.delegate = self
         secondPicker.dataSource = self
@@ -75,6 +83,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print (numbers)
         
+        
+        
        
     }
 
@@ -105,6 +115,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 mySecondNumberLabel.text = "\(numbers[row])"
                 fristerLabel.text = "\(myArray[row])"
                 
+            } else {
+                
+                if pickerView == thirdPicker {
+                    myThirdNumberLabel.text = "\(numbers[row])"
+                    SingeULabel.text = "\(myArray[row])"
+                    
+                } else {
+                    
+                    if pickerView == fourthPicker {
+                        myFourthNumberLabel.text = "\(numbers[row])"
+                        vestALabel.text = "\(myArray[row])"
+                        
+                    }
+                }
             }
             
         }
@@ -123,8 +147,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             return myArray[row]
         
-        }
-            return ""
+            } else {
+                
+                if thirdPicker == pickerView {
+                    
+                    return myArray[row]
+                } else {
+                    
+                    if fourthPicker == pickerView {
+                        
+                        return myArray[row]
+                    }
+                }
+             
+                return ""
+                
+            }
 }
 }
 }
