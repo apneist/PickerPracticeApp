@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,23 +21,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pfaff" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-wL-JkR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pfaff" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-wL-JkR">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="G0O-hI-ol7"/>
                                     <constraint firstAttribute="height" constant="133" id="NDt-a4-sLd"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frister &amp; Rossmann" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-CX-JYy"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frister &amp; Rossmann" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-CX-JYy"/>
                             <pickerView contentMode="scaleAspectFit" horizontalHuggingPriority="150" verticalHuggingPriority="150" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-km-rrL">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="133" id="Hfm-ne-A69"/>
+                                    <constraint firstAttribute="height" constant="81" id="FM4-8e-J4v"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="2kl-DA-ICW"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4gK-7h-PMA"/>
                                 </connections>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="singer" translatesAutoresizingMaskIntoConstraints="NO" id="EBz-ej-LpR">
+                                <frame key="frameInset" minX="2" minY="309" width="150" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DZo-oQ-Hef"/>
+                                    <constraint firstAttribute="height" constant="133" id="zXI-UP-75f"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vesta" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-Ka-6lh">
+                                <frame key="frameInset" minX="170" minY="309" width="150" height="133"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLT-Fh-GBE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="6xE-Sh-mHd"/>
+                                    <constraint firstAttribute="width" constant="131" id="pda-ig-2uY"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6i-L2-m5c"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-9D-n3c"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq1-1c-qP4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYn-m2-Kw8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL3-x6-m0M">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKx-1y-Y4N">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="bo6-1d-3GK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,19 +81,48 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="centerX" secondItem="Oxa-km-rrL" secondAttribute="centerX" id="NqA-H4-OiV"/>
-                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="P8M-ja-6AF"/>
+                            <constraint firstItem="s6i-L2-m5c" firstAttribute="top" secondItem="jLT-Fh-GBE" secondAttribute="top" id="1Mp-9N-ufh"/>
+                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="firstBaseline" secondItem="Nq1-1c-qP4" secondAttribute="baseline" id="3mq-QU-BZs"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="leading" secondItem="EBz-ej-LpR" secondAttribute="trailing" constant="18" id="4OB-nG-B7s"/>
+                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="centerX" secondItem="Oxa-km-rrL" secondAttribute="centerX" id="5B5-KM-b1T"/>
+                            <constraint firstItem="LNo-9D-n3c" firstAttribute="trailing" secondItem="L3T-CX-JYy" secondAttribute="trailing" id="A00-5O-e7N"/>
+                            <constraint firstItem="jLT-Fh-GBE" firstAttribute="top" secondItem="EBz-ej-LpR" secondAttribute="bottom" constant="37" id="BIy-MJ-R5A"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="top" secondItem="EBz-ej-LpR" secondAttribute="top" id="FSy-ls-L2u"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="GT5-ev-fP7"/>
+                            <constraint firstItem="EBz-ej-LpR" firstAttribute="top" secondItem="Oxa-km-rrL" secondAttribute="bottom" constant="28" id="Jl3-zW-LDn"/>
+                            <constraint firstItem="Oxa-km-rrL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LSy-5g-VXk"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="leading" secondItem="L3T-CX-JYy" secondAttribute="leading" id="NX6-as-kZb"/>
+                            <constraint firstItem="LNo-9D-n3c" firstAttribute="top" secondItem="Oxa-km-rrL" secondAttribute="top" id="Pc6-1A-CHc"/>
+                            <constraint firstItem="gYn-m2-Kw8" firstAttribute="baseline" secondItem="HL3-x6-m0M" secondAttribute="baseline" id="Q8Q-7V-6yX"/>
+                            <constraint firstItem="EBz-ej-LpR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Qis-KR-bcc"/>
+                            <constraint firstItem="jLT-Fh-GBE" firstAttribute="top" secondItem="EBz-ej-LpR" secondAttribute="bottom" constant="37" id="T5e-Vv-dKh"/>
+                            <constraint firstItem="s6i-L2-m5c" firstAttribute="top" secondItem="SYG-Ka-6lh" secondAttribute="bottom" constant="37" id="TbK-Qh-Vtq"/>
                             <constraint firstItem="L3T-CX-JYy" firstAttribute="leading" secondItem="wfC-wL-JkR" secondAttribute="trailing" constant="18" id="UMv-eu-wlp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oxa-km-rrL" secondAttribute="bottom" constant="287" id="XY2-R2-IPB"/>
+                            <constraint firstItem="jLT-Fh-GBE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="XEX-U6-cQk"/>
                             <constraint firstAttribute="trailing" secondItem="L3T-CX-JYy" secondAttribute="trailing" id="Z0t-Fz-bnX"/>
-                            <constraint firstItem="Oxa-km-rrL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZV6-1g-Dzi"/>
-                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dXb-60-3kl"/>
-                            <constraint firstItem="wfC-wL-JkR" firstAttribute="top" secondItem="VKx-1y-Y4N" secondAttribute="bottom" constant="5" id="e9N-oW-EHQ"/>
+                            <constraint firstAttribute="trailing" secondItem="SYG-Ka-6lh" secondAttribute="trailing" id="aBO-vh-oV4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jLT-Fh-GBE" secondAttribute="bottom" constant="8" symbolic="YES" id="bax-1C-DKv"/>
+                            <constraint firstItem="LNo-9D-n3c" firstAttribute="leading" secondItem="Oxa-km-rrL" secondAttribute="trailing" constant="56" id="cnx-Ch-fsw"/>
+                            <constraint firstItem="LNo-9D-n3c" firstAttribute="bottom" secondItem="Oxa-km-rrL" secondAttribute="bottom" id="dqR-cn-UML"/>
                             <constraint firstItem="wfC-wL-JkR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="gFH-Us-6IL"/>
-                            <constraint firstItem="Oxa-km-rrL" firstAttribute="top" secondItem="wfC-wL-JkR" secondAttribute="bottom" constant="8" symbolic="YES" id="gH3-bm-FF4"/>
+                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="centerX" secondItem="gYn-m2-Kw8" secondAttribute="centerX" id="ih2-XS-yCM"/>
                             <constraint firstItem="L3T-CX-JYy" firstAttribute="bottom" secondItem="wfC-wL-JkR" secondAttribute="bottom" id="mMq-mo-HUy"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="trailing" secondItem="L3T-CX-JYy" secondAttribute="trailing" id="mU3-Tg-3xn"/>
+                            <constraint firstItem="s6i-L2-m5c" firstAttribute="leading" secondItem="LNo-9D-n3c" secondAttribute="leading" id="oYb-HR-kRT"/>
+                            <constraint firstItem="LNo-9D-n3c" firstAttribute="top" secondItem="L3T-CX-JYy" secondAttribute="bottom" constant="8" symbolic="YES" id="pBA-49-wS8"/>
                             <constraint firstItem="L3T-CX-JYy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="qxQ-ju-Vgk"/>
+                            <constraint firstItem="Nq1-1c-qP4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="rKy-1y-HPp"/>
+                            <constraint firstItem="HL3-x6-m0M" firstAttribute="centerX" secondItem="SYG-Ka-6lh" secondAttribute="centerX" id="rml-aO-5ep"/>
+                            <constraint firstItem="jLT-Fh-GBE" firstAttribute="leading" secondItem="EBz-ej-LpR" secondAttribute="leading" id="tvr-6P-ZVO"/>
+                            <constraint firstItem="EBz-ej-LpR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="uVY-fk-XTa"/>
+                            <constraint firstItem="HL3-x6-m0M" firstAttribute="leading" secondItem="Nq1-1c-qP4" secondAttribute="leading" id="v59-dA-aDo"/>
+                            <constraint firstItem="HL3-x6-m0M" firstAttribute="top" secondItem="SYG-Ka-6lh" secondAttribute="top" id="wce-Pu-2jc"/>
                             <constraint firstItem="L3T-CX-JYy" firstAttribute="top" secondItem="wfC-wL-JkR" secondAttribute="top" id="x8E-QZ-3aD"/>
+                            <constraint firstItem="VKx-1y-Y4N" firstAttribute="leading" secondItem="gYn-m2-Kw8" secondAttribute="leading" id="xTg-s5-P5x"/>
+                            <constraint firstItem="s6i-L2-m5c" firstAttribute="trailing" secondItem="SYG-Ka-6lh" secondAttribute="trailing" id="xaw-nP-MkT"/>
+                            <constraint firstItem="Oxa-km-rrL" firstAttribute="trailing" secondItem="jLT-Fh-GBE" secondAttribute="trailing" id="yK5-c4-dZ6"/>
+                            <constraint firstItem="SYG-Ka-6lh" firstAttribute="leading" secondItem="EBz-ej-LpR" secondAttribute="trailing" constant="18" id="zLd-cT-Xhc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s6i-L2-m5c" secondAttribute="bottom" constant="8" symbolic="YES" id="zkm-vw-6d5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -71,5 +138,7 @@
     <resources>
         <image name="Frister &amp; Rossmann" width="500" height="348"/>
         <image name="pfaff" width="800" height="532"/>
+        <image name="singer" width="1280" height="851"/>
+        <image name="vesta" width="500" height="293"/>
     </resources>
 </document>
